@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>Programming Project</title>
+    <script type="text/javascript" src="./Common/webgl-utils.js"></script>
+    <script type="text/javascript" src="./Common/initShaders1pt1.js"></script>
+    <script type="text/javascript" src="./Common/MV.js"></script>
+    <!-- <script src="https://unpkg.com/konva@5.0.3/konva.min.js"></script> -->
+    <script src='./Common/konva2.js'></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="project_konva3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"
+        integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-9">
+                <h3 style="text-align: center;">Workspace</h3>
+                <div class="border border-secondary" id='canvas-container'></div>
+            </div>
+            <div class="col-md-3">
+                <h3 style="text-align: center;">Palette</h3>
+                <div class="border border-secondary">
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <input type="button" id="line" value="Line" class="btn btn-outline-secondary">
+                        <input type="button" id="polyline" value="PolyLine" class="btn btn-outline-secondary">
+                        <input type="button" id="polycurve" value="PolyCurve" class="btn btn-outline-secondary">
+                    </div>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <input type="button" id="tri" value="Triangle" class="btn btn-outline-secondary">
+                        <input type="button" id="rect" value="Rectangle" class="btn btn-outline-secondary">
+                        <input type="button" id="square" value="Square" class="btn btn-outline-secondary">
+                        <input type="button" id="poly" value="Polygon" class="btn btn-outline-secondary">
+                    </div>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <input type="button" id="circ" value="Circle" class="btn btn-outline-secondary">
+                        <input type="button" id="ellipse" value="Ellipse" class="btn btn-outline-secondary">
+                    </div>
+                    <br>
+                    <input type="button" id="clear" value="Clear" class="btn btn-outline-secondary">
+                    <input type="button" id="draw" value="Draw" class="btn btn-outline-secondary">
+                    <br>
+                    <input type="file" id="load" value="Load" class="btn btn-outline-secondary">
+                    <input type="button" id="save" value="Save" class="btn btn-outline-secondary">
+                    <br>
+                    <form id='saveList' name='saveList'>
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" id="image" name="save" value="image">Save as Image
+                            </label>
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" id="txt" name="save" value="txt">Save as Text
+                            </label>
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" id="pdf" name="save" value="pdf">Save as PDF
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class='footer'>
+        <div class="container">
+            <span class="text-muted"> Computer Graphics Project</span>
+        </div>
+    </footer>
+</body>
+
+</html>
